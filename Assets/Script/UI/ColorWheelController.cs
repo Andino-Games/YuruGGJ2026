@@ -43,10 +43,7 @@ public class ColorWheelController : MonoBehaviour
         _controls.Gameplay.Disable();
     }
 
-    // ELIMINAMOS EL UPDATE QUE MOVÍA LA RUEDA
-    // private void Update() { ... } 
-
-    // --- LÓGICA DE DOBLE CLIC (RESET) ---
+    
     private void OnDoubleClick(InputAction.CallbackContext context)
     {
         Debug.Log(">>> DOBLE CLIC DETECTADO: Reseteando a Color Base (None) <<<");
@@ -55,19 +52,25 @@ public class ColorWheelController : MonoBehaviour
         _colorChannel.RaiseColorChanged(GameColor.None);
     }
 
-    // --- LÓGICA DE CLIC NORMAL (SELECCIÓN) ---
+    
     private void OnClickStarted(InputAction.CallbackContext context)
     {
+        Debug.Log(">>> CLIC INICIADO: Abriendo rueda en el CENTRO <<<");
+        
         _isSelecting = true;
-        Vector2 mousePos = _controls.Gameplay.MousePosition.ReadValue<Vector2>();
+        
+        Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
         
         if (_wheelVisuals != null)
         {
-            // Solo movemos la rueda AL INICIO del clic. Luego se queda quieta.
-            _wheelVisuals.transform.position = mousePos;
+            
+            _wheelVisuals.transform.position = screenCenter;
             _wheelVisuals.SetActive(true);
         }
-        Debug.Log(">>> CLIC INICIADO: Rueda fijada en posición " + mousePos + " <<<");
+        if (Mouse.current != null)  
+        {
+            Mouse.current.WarpCursorPosition(screenCenter);
+        }
     }
 
     private void OnClickReleased(InputAction.CallbackContext context)
