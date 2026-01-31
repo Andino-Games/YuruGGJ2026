@@ -15,8 +15,12 @@ public class ColorWheelController : MonoBehaviour
     private GameControls _controls;
     private bool _isSelecting;
 
+    public GameColor selected;
+    public static ColorWheelController Instance;
+
     private void Awake()
     {
+        Instance = this;
         _controls = new GameControls();
         if (_wheelVisuals == null) Debug.LogError("¡ERROR! No has asignado '_wheelVisuals' en el inspector.");
         else _wheelVisuals.SetActive(false);
@@ -73,7 +77,7 @@ public class ColorWheelController : MonoBehaviour
         _isSelecting = false;
         if (_wheelVisuals != null) _wheelVisuals.SetActive(false);
 
-        GameColor selected = CalculateColorFromMouse();
+        selected = CalculateColorFromMouse();
         
         if (selected != GameColor.None)
         {
