@@ -290,6 +290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2a9a035ed99b14a81229b34715cd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+  _speed: 5
+  _jumpForce: 8
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &46589760
 MonoBehaviour:
   m_ObjectHideFlags: 0

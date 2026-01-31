@@ -1,33 +1,64 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 
 public class Player : MonoBehaviour
 {
-   private PlayerControls controls;
+    private PlayerControls controls;
     private Vector2 moveInput;
+    
+
+    [Header("Player Configuration")]
+    Rigidbody2D rb;
+    [SerializeField] private float _speed, _jumpForce;
+    [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private Transform _groundCheckPoint;
+    [SerializeField] private float _groundCheckRadius = 0.2f;
+    private bool isGrounded;
+
+    
 
     private void Awake()
     {
         controls = new PlayerControls();
-        
-        // Suscribirse a eventos (como el salto)
-        // controls.Player.Jump.performed += ctx => Jump();
-    }
+        rb = GetComponent<Rigidbody2D>();
 
+    }
     private void Update()
     {
-        // Leer valores continuos (como el movimiento)
         moveInput = controls.Player.Move.ReadValue<Vector2>();
-        transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * 5f);
+        rb.linearVelocity = new Vector2(moveInput.x * _speed, rb.linearVelocity.y);
+
+        if(moveInput.y > 0.5f)
+        {
+            Jump();
+        }
+
+        
     }
 
-    // private void Jump()
-    // {
-    //     Debug.Log("¡Saltaste!");
-    // }
+    private void Jump()
+    {
+        isGrounded = Physics2D.OverlapCircle(_groundCheckPoint.position, _groundCheckRadius, _groundLayer);
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, _jumpForce);
+        }
 
-    // Es vital activar y desactivar los controles
+    }
+    private void OnDrawGizmos()
+    {
+        if (_groundCheckPoint != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(_groundCheckPoint.position, _groundCheckRadius);
+        }
+    }
+
     private void OnEnable() => controls.Player.Enable();
     private void OnDisable() => controls.Player.Disable();
+
+    
+    
 }
