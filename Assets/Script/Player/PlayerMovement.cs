@@ -47,6 +47,11 @@ namespace Script.Player
             if (_isGrounded)
             {
                 _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                
+                if (AudioManager.Instance != null)
+                {
+                    AudioManager.Instance.Play("Jump");  //PILAS CAMBIAR NOMBRE
+                }
             }
         }
 
