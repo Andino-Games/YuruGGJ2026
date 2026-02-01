@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: aa1aac931d14c7b43954c2622ddbcf87
+guid: 9cbdf3933c0a0834e83081edb7bf101c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4439411671333210003
-    second: Modulo_2_0
+      213: -9217122033655987949
+    second: f7 (20260131080959)_0
+  - first:
+      213: -2800580070347587622
+    second: f7 (20260131080959)_1
+  - first:
+      213: 5607951902347835102
+    second: f7 (20260131080959)_2
+  - first:
+      213: -6887761802150105637
+    second: f7 (20260131080959)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 800
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,45 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Modulo_2_0
+      name: f7 (20260131080959)_0
       rect:
         serializedVersion: 2
-        x: 915
-        y: 819
-        width: 1303
-        height: 1265
+        x: 0
+        y: 385
+        width: 1631
+        height: 1055
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3970a81e465fb9d30800000000000000
-      internalID: 4439411671333210003
+      spriteID: 31142844854361080800000000000000
+      internalID: -9217122033655987949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Modulo_2_1
+      name: f7 (20260131080959)_1
       rect:
         serializedVersion: 2
-        x: 915
-        y: 2081
-        width: 1303
-        height: 291
+        x: 111
+        y: 0
+        width: 1788
+        height: 1440
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6b3779e87de915f4db37d028035e5c3e
-      internalID: 964542456
+      spriteID: adfb4ed93475229d0800000000000000
+      internalID: -2800580070347587622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f7 (20260131080959)_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 0
+        width: 1930
+        height: 1440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed63be00b8273dd40800000000000000
+      internalID: 5607951902347835102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f7 (20260131080959)_3
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 480
+        height: 1399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdda6554221c960a0800000000000000
+      internalID: -6887761802150105637
       vertices: []
       indices: 
       edges: []
@@ -160,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b97641865813c084eaaf925747e06ce0
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Modulo_2_0: 4439411671333210003
-      Modulo_2_1: 964542456
+      f7 (20260131080959)_0: -9217122033655987949
+      f7 (20260131080959)_1: -2800580070347587622
+      f7 (20260131080959)_2: 5607951902347835102
+      f7 (20260131080959)_3: -6887761802150105637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
