@@ -414,6 +414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DesapearObject
       objectReference: {fileID: 0}
+    - target: {fileID: 4184339314914324989, guid: 956e6d94cc0398f4c95a997b95074ad7, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 4942454267863448078, guid: 956e6d94cc0398f4c95a997b95074ad7, type: 3}
       propertyPath: m_Sprite
       value: 
