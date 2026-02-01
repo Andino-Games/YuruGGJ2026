@@ -13,7 +13,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerGroup _sfxGroup;
 
     [Header("Librería de Sonidos")]
-    public Sound[] sounds; // Unifiqué Music y SFX en una sola lista para simplificar búsqueda
+    public Sound[] sounds; 
 
     [Header("Conexión con Eventos (Opcional)")]
     [SerializeField] private ColorEventChannel _colorChannel;
@@ -80,7 +80,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnKeyAcquiredAudio()
     {
-        Play("KeyPickup");
+        Play("KeyPickup");   //PILAS COLOCAR NOMBRE
     }
 
     // --- SISTEMA LIBRE POR STRINGS ---

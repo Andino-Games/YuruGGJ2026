@@ -1,3 +1,4 @@
+using Script.PowerUps;
 using Script.PowerUps.SecretKey;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,24 +7,28 @@ namespace Script.UI
 {
     public class ColorWheelController : MonoBehaviour
     {
-        [Header("Referencias")]
+        [Header("Sistemas")]
         [SerializeField] private ColorEventChannel colorChannel;
-        [SerializeField] private GameCapabilityState capabilityState; // Referencia al estado secreto
-        [SerializeField] private GameObject wheelVisuals;
+        [SerializeField] private GameCapabilityState secretState; 
+        [SerializeField] private ColorCapabilityState colorState; // Estado de desbloqueo
 
-        [Header("Configuración de Colores")]
-        [SerializeField] private GameColor colorTop;
-        [SerializeField] private GameColor colorRight;
-        [SerializeField] private GameColor colorLeft;
+        [Header("UI Visuals")]
+        [SerializeField] private GameObject wheelVisuals; // La rueda completa (un solo objeto)
+
+        [Header("Configuración de Colores (Lógica)")]
+        [SerializeField] private GameColor colorTop = GameColor.ColorA;
+        [SerializeField] private GameColor colorLeft = GameColor.ColorB;
+        [SerializeField] private GameColor colorRight = GameColor.ColorC;
 
         private GameControls _controls;
         private bool _isSelecting;
 
         private void Awake()
         {
-            // 1. Limpieza de memoria (Importante para evitar bugs al reiniciar)
+            // Limpieza de memoria al iniciar
             if (colorChannel) colorChannel.ResetState();
-            if (capabilityState) capabilityState.ResetState();
+            if (secretState) secretState.ResetState();
+            if (colorState) colorState.ResetState();
 
             _controls = new GameControls();
             if (wheelVisuals) wheelVisuals.SetActive(false);
@@ -49,7 +54,7 @@ namespace Script.UI
         {
             _isSelecting = true;
         
-            // Forzar aparición en el CENTRO de la pantalla
+            // Centrar en pantalla
             Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
         
             if (wheelVisuals)
@@ -58,13 +63,9 @@ namespace Script.UI
                 wheelVisuals.SetActive(true);
             }
 
-            // Opcional: Llevar el mouse al centro
             if (Mouse.current != null) Mouse.current.WarpCursorPosition(screenCenter);
 
-            if (AudioManager.Instance != null)
-            {
-                AudioManager.Instance.Play("WheelOpen");   //PILAS CAMBIAR NOMBRE
-            }
+            if (AudioManager.Instance != null) AudioManager.Instance.Play("WheelOpen");
         }
 
         private void OnClickReleased(InputAction.CallbackContext context)
@@ -76,20 +77,17 @@ namespace Script.UI
 
             GameColor selected = CalculateColorFromMouse();
         
-            if (selected != GameColor.None)
+            // LÓGICA DE BLOQUEO:
+            // Solo permitimos cambiar si el color es None (gris) O si tenemos el color desbloqueado
+            if (selected != GameColor.None && colorState.IsUnlocked(selected))
             {
-                if (AudioManager.Instance != null)
-                {
-                    AudioManager.Instance.Play("WheelSelect");    //PILAS CAMBIAR NOMBRE
-                }
+                if (AudioManager.Instance != null) AudioManager.Instance.Play("WheelSelect");
                 colorChannel.RaiseColorChanged(selected);
             }
             else
             {
-                if (AudioManager.Instance != null)
-                {
-                    AudioManager.Instance.Play("WheelClose");    //PILAS CAMBIAR NOMBRE
-                }
+                // Si intentas seleccionar algo bloqueado o nada
+                if (AudioManager.Instance != null) AudioManager.Instance.Play("WheelClose");
             }
         }
 
@@ -97,9 +95,6 @@ namespace Script.UI
         {
             _isSelecting = false;
             if (wheelVisuals) wheelVisuals.SetActive(false);
-            
-            // Nota: No agregamos audio aquí porque AudioManager ya reproduce "ColorReset"
-            // automáticamente al detectar GameColor.None
             colorChannel.RaiseColorChanged(GameColor.None);
         }
 

@@ -347,11 +347,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8877dba363e9342a6603d87655b3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorWheelController
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _wheelVisuals: {fileID: 106385079}
-  _colorTop: 1
-  _colorRight: 2
-  _colorLeft: 3
+  colorChannel: {fileID: 0}
+  secretState: {fileID: 0}
+  colorState: {fileID: 0}
+  wheelVisuals: {fileID: 0}
+  colorTop: 1
+  colorLeft: 2
+  colorRight: 3
 --- !u!114 &106385084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,8 +366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aef4d129e29ceb4e9add36852137457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorReactiveObject
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _objectColor: 1
+  colorChannel: {fileID: 0}
+  objectColor: 0
 --- !u!114 &106385085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,12 +858,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421c1632dcc49ae4ca2f42c32234ea32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundListener
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _backgroundSprite: {fileID: 450491216}
-  _colorBase: {r: 0, g: 0, b: 0, a: 1}
-  _visualColorA: {r: 0.46274513, g: 0.043137256, b: 0.007843138, a: 1}
-  _visualColorB: {r: 0.29411766, g: 0.37254903, b: 0.19215688, a: 1}
-  _visualColorC: {r: 0.18039216, g: 0.2627451, b: 0.37254903, a: 1}
+  colorChannel: {fileID: 0}
+  backgroundSprite: {fileID: 0}
+  colorBase: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  visualColorA: {r: 1, g: 0.5, b: 0.5, a: 1}
+  visualColorB: {r: 0.5, g: 0.5, b: 1, a: 1}
+  visualColorC: {r: 0.5, g: 1, b: 0.5, a: 1}
 --- !u!1 &983222715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,11 +1003,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8877dba363e9342a6603d87655b3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorWheelController
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _wheelVisuals: {fileID: 106385079}
-  _colorTop: 1
-  _colorRight: 2
-  _colorLeft: 3
+  colorChannel: {fileID: 0}
+  secretState: {fileID: 0}
+  colorState: {fileID: 0}
+  wheelVisuals: {fileID: 0}
+  colorTop: 1
+  colorLeft: 2
+  colorRight: 3
 --- !u!1 &1550928326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,7 +1143,7 @@ Transform:
   m_GameObject: {fileID: 1550928326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.75, y: -2.32, z: 0}
+  m_LocalPosition: {x: 7.59, y: -1.68, z: 0}
   m_LocalScale: {x: 2.2438087, y: 1.9026577, z: 0.41664}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1157,8 +1161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aef4d129e29ceb4e9add36852137457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorReactiveObject
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _objectColor: 1
+  colorChannel: {fileID: 0}
+  objectColor: 0
 --- !u!1 &1715624073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,8 +1378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aef4d129e29ceb4e9add36852137457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorReactiveObject
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _objectColor: 3
+  colorChannel: {fileID: 0}
+  objectColor: 0
 --- !u!4 &1752486286
 Transform:
   m_ObjectHideFlags: 0
@@ -1385,7 +1389,7 @@ Transform:
   m_GameObject: {fileID: 1752486282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: -2.32, z: 0}
+  m_LocalPosition: {x: 4.79, y: -1.78, z: 0}
   m_LocalScale: {x: 2.2438087, y: 1.9026577, z: 0.41664}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1488,7 +1492,7 @@ SpriteRenderer:
   m_Size: {x: 20.000002, y: 20.009768}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1861374092
 Transform:
@@ -1641,8 +1645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aef4d129e29ceb4e9add36852137457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ColorReactiveObject
-  _colorChannel: {fileID: 11400000, guid: e70aecad5bb84b248b60fd054d651d0c, type: 2}
-  _objectColor: 2
+  colorChannel: {fileID: 0}
+  objectColor: 0
 --- !u!4 &1912993771
 Transform:
   m_ObjectHideFlags: 0
@@ -1652,7 +1656,7 @@ Transform:
   m_GameObject: {fileID: 1912993767}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.87, y: -2.32, z: 0}
+  m_LocalPosition: {x: 1.83, y: -1.57, z: 0}
   m_LocalScale: {x: 2.2438087, y: 1.9026577, z: 0.41664}
   m_ConstrainProportionsScale: 0
   m_Children: []
