@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 608f95a723e621f43a50a48e1fbd0b84
+guid: df3861dfda447cf4fa5525424ac49ef9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5906434058324365776
-    second: jaguar lado_0
+      213: -8395655887748199782
+    second: f1 (20260131080618)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jaguar lado_0
+      name: f1 (20260131080618)_0
       rect:
         serializedVersion: 2
-        x: 470
-        y: 345
-        width: 1061
-        height: 1310
+        x: 0
+        y: 0
+        width: 2560
+        height: 1440
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03eae408481280ea0800000000000000
-      internalID: -5906434058324365776
+      spriteID: a9a0a52c373ac7b80800000000000000
+      internalID: -8395655887748199782
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      jaguar lado_0: -5906434058324365776
+      f1 (20260131080618)_0: -8395655887748199782
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,64 +1,19 @@
 fileFormatVersion: 2
-guid: 4360c4622b8d5a14facc32de0b517669
+guid: 9cbdf3933c0a0834e83081edb7bf101c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3255269136977687312
-    second: caminata (20260131090306)_0
+      213: -9217122033655987949
+    second: f7 (20260131080959)_0
   - first:
-      213: 6672357421118628359
-    second: caminata (20260131090306)_1
+      213: -2800580070347587622
+    second: f7 (20260131080959)_1
   - first:
-      213: 1958869151873925020
-    second: caminata (20260131090306)_2
+      213: 5607951902347835102
+    second: f7 (20260131080959)_2
   - first:
-      213: 6298991321752578923
-    second: caminata (20260131090306)_3
-  - first:
-      213: -2426969880155866793
-    second: caminata (20260131090306)_4
-  - first:
-      213: 7025914295376561594
-    second: caminata (20260131090306)_5
-  - first:
-      213: -1078150119883197565
-    second: caminata (20260131090306)_6
-  - first:
-      213: 8703192425813662391
-    second: caminata (20260131090306)_7
-  - first:
-      213: 5246753375387352704
-    second: caminata (20260131090306)_8
-  - first:
-      213: 6535295500497181113
-    second: caminata (20260131090306)_9
-  - first:
-      213: 5125615740848137342
-    second: caminata (20260131090306)_10
-  - first:
-      213: 175580838497347915
-    second: caminata (20260131090306)_11
-  - first:
-      213: 313081523393671900
-    second: caminata (20260131090306)_12
-  - first:
-      213: -3534749713371035706
-    second: caminata (20260131090306)_13
-  - first:
-      213: -3012857767494623522
-    second: caminata (20260131090306)_14
-  - first:
-      213: -1571972540628433769
-    second: caminata (20260131090306)_15
-  - first:
-      213: 589809260919212918
-    second: caminata (20260131090306)_16
-  - first:
-      213: -363562722676441047
-    second: caminata (20260131090306)_17
-  - first:
-      213: -3561532660396501872
-    second: caminata (20260131090306)_18
+      213: -6887761802150105637
+    second: f7 (20260131080959)_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -91,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 800
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -167,67 +122,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Caminar_0
+      name: f7 (20260131080959)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2000
-        height: 2000
+        y: 385
+        width: 1631
+        height: 1055
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bddf1a0c986adde4fae84cfa8a42e510
-      internalID: 1810501845
+      spriteID: 31142844854361080800000000000000
+      internalID: -9217122033655987949
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Caminar_1
+      name: f7 (20260131080959)_1
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 111
         y: 0
-        width: 2000
-        height: 2000
+        width: 1788
+        height: 1440
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 50c19181b3a4b57499c17267b21f9bb5
-      internalID: 862214020
+      spriteID: adfb4ed93475229d0800000000000000
+      internalID: -2800580070347587622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Caminar_2
+      name: f7 (20260131080959)_2
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 618
         y: 0
-        width: 2000
-        height: 2000
+        width: 1930
+        height: 1440
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f1a656909366cd444968812dcf72ebdc
-      internalID: 1150043842
+      spriteID: ed63be00b8273dd40800000000000000
+      internalID: 5607951902347835102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: f7 (20260131080959)_3
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 480
+        height: 1399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdda6554221c960a0800000000000000
+      internalID: -6887761802150105637
       vertices: []
       indices: 
       edges: []
@@ -236,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6be80199aa255144bb54ba21cbe729ea
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -244,13 +221,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":1.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Caminar_0: 1810501845
-      Caminar_1: 862214020
-      Caminar_2: 1150043842
+      f7 (20260131080959)_0: -9217122033655987949
+      f7 (20260131080959)_1: -2800580070347587622
+      f7 (20260131080959)_2: 5607951902347835102
+      f7 (20260131080959)_3: -6887761802150105637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
