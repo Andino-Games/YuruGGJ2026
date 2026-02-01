@@ -1,44 +1,42 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-namespace Script.Player
+
+public class MiniPlayer : MonoBehaviour
 {
-    public class MiniPlayer : MonoBehaviour
+    private PlayerControls controls;
+
+    SpriteRenderer player;
+    [SerializeField] SpriteRenderer _MiniplayerSp;
+    [SerializeField] Collider2D _MiniplayerCol;
+    Collider2D playerCol;
+
+    bool _isMiniPress = false;
+    private void Awake()
     {
-        private PlayerControls _controls;
-
-        private SpriteRenderer _player;
-        [SerializeField] private SpriteRenderer miniplayerSp;
-        [SerializeField] private Collider2D miniplayerCol;
-        private Collider2D _playerCol;
-
-        bool _isMiniPress;
-
-        private void Awake()
-        {
-            _controls = new PlayerControls();
-            _player = GetComponent<SpriteRenderer>();
-            _playerCol = GetComponent<Collider2D>();
-        }
-
-        private void Update()
-        {
-            if (_controls.Player.PowerUp.triggered)
-            {
-                _isMiniPress = !_isMiniPress;
-                LittlePlayer(_isMiniPress);
-            }
-        }
-
-        private void LittlePlayer(bool isPress)
-        {
-            _player.enabled = !isPress;
-            _playerCol.enabled = !isPress;
-            miniplayerSp.enabled = isPress;
-            miniplayerCol.enabled = isPress;
-        }
-
-        private void OnEnable() => _controls.Player.Enable();
-
-        private void OnDisable() => _controls.Player.Disable();
+        controls = new PlayerControls();
+        player = GetComponent<SpriteRenderer>();
+        playerCol = GetComponent<Collider2D>();
     }
+  
+
+    private void Update()
+    {
+       if (controls.Player.PowerUp.triggered)
+        {
+            _isMiniPress = !_isMiniPress;
+            LittlePlayer(_isMiniPress);
+        }
+
+    }
+    private void LittlePlayer(bool _isPress)
+    {
+        player.enabled = !_isPress;
+        playerCol.enabled = !_isPress;
+        _MiniplayerSp.enabled = _isPress;
+        _MiniplayerCol.enabled = _isPress;
+        //Debug.Log("Presiono");
+    }
+    private void OnEnable() => controls.Player.Enable();
+    private void OnDisable() => controls.Player.Disable();
 }

@@ -1,66 +1,74 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
-namespace Script.Player
+
+public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour
-    {
-        private PlayerControls _controls;
-        private Vector2 _moveInput;
+    private PlayerControls controls;
+    private Vector2 moveInput;
     
 
-        [Header("Player Configuration")] 
-        private Rigidbody2D _rb;
-        [SerializeField] private float speed;
-        [SerializeField] private float jumpForce;
-        [SerializeField] private float acceleraton = 10f;
-        [SerializeField] private float decelerator = 10f;
-        [SerializeField] private LayerMask groundLayer;
-        [SerializeField] private Transform groundCheckPoint;
-        [SerializeField] private float groundCheckRadius = 0.2f;
-        private bool _isGrounded;
+    [Header("Player Configuration")]
+    Rigidbody2D rb;
+    [SerializeField] private float _speed, _jumpForce, _acceleraton = 10f, _decelerator = 10f;
+    [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private Transform _groundCheckPoint;
+    [SerializeField] private float _groundCheckRadius = 0.2f;
+    private bool isGrounded;
 
-        private void Awake()
+
+    private void Awake()
+    {
+        controls = new PlayerControls();
+        rb = GetComponent<Rigidbody2D>();
+
+    }
+ 
+
+    private void FixedUpdate()
+    {
+        moveInput = controls.Player.Move.ReadValue<Vector2>();
+
+        float targetSpeed = moveInput.x * _speed;
+        float learp = (Mathf.Abs(targetSpeed) > 0.01f) ? _acceleraton : _decelerator;
+
+        float newVelocity = Mathf.Lerp(rb.linearVelocity.x, targetSpeed, learp * Time.fixedDeltaTime);
+        rb.linearVelocity = new Vector2(newVelocity, rb.linearVelocity.y);
+
+        //Jump--------------------------------------------------------------------------------------
+        if (moveInput.y > 0.5f)
         {
-            _controls = new PlayerControls();
-            _rb = GetComponent<Rigidbody2D>();
+            Jump();
         }
 
-        private void FixedUpdate()
+    }
+
+    private void Jump()
+    {
+        isGrounded = Physics2D.OverlapCircle(_groundCheckPoint.position, _groundCheckRadius, _groundLayer);
+        if (isGrounded)
         {
-            _moveInput = _controls.Player.Move.ReadValue<Vector2>();
-
-            float targetSpeed = _moveInput.x * speed;
-            float learp = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleraton : decelerator;
-
-            float newVelocity = Mathf.Lerp(_rb.linearVelocity.x, targetSpeed, learp * Time.fixedDeltaTime);
-            _rb.linearVelocity = new Vector2(newVelocity, _rb.linearVelocity.y);
-
-            if (_moveInput.y > 0.5f)
-            {
-                Jump();
-            }
+            rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
         }
 
-        private void Jump()
-        {
-            _isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
-            if (_isGrounded)
-            {
-                _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            }
-        }
+    }
 
    
-        private void OnDrawGizmos()
+    private void OnDrawGizmos()
+    {
+        if (_groundCheckPoint != null)
         {
-            if (!groundCheckPoint) return;
-            
             Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
+            Gizmos.DrawWireSphere(_groundCheckPoint.position, _groundCheckRadius);
         }
-
-        private void OnEnable() => _controls.Player.Enable();
-
-        private void OnDisable() => _controls.Player.Disable();
     }
+
+
+
+    private void OnEnable() => controls.Player.Enable();
+    private void OnDisable() => controls.Player.Disable();
+
+    
+    
 }

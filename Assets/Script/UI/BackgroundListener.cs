@@ -1,52 +1,53 @@
 using UnityEngine;
 
-namespace Script.UI
+public class BackgroundListener : MonoBehaviour
 {
-    public class BackgroundListener : MonoBehaviour
-    {
-        [Header("Conexiones")]
-        [Tooltip("Arrastra aquí el mismo GlobalColorChannel que usa el GameManager")]
-        [SerializeField] private ColorEventChannel colorChannel;
+    [Header("Conexiones")]
+    [Tooltip("Arrastra aquí el mismo GlobalColorChannel que usa el GameManager")]
+    [SerializeField] private ColorEventChannel _colorChannel;
     
-        [Tooltip("El componente SpriteRenderer de tu fondo")]
-        [SerializeField] private SpriteRenderer backgroundSprite;
+    [Tooltip("El componente SpriteRenderer de tu fondo")]
+    [SerializeField] private SpriteRenderer _backgroundSprite;
 
-        [Header("Paleta de Colores (Visuales)")]
-        [SerializeField] private Color colorBase = Color.gray;
-        [SerializeField] private Color visualColorA = new(1f, 0.5f, 0.5f); 
-        [SerializeField] private Color visualColorB = new(0.5f, 0.5f, 1f); 
-        [SerializeField] private Color visualColorC = new(0.5f, 1f, 0.5f); 
+    [Header("Paleta de Colores (Visuales)")]
+    // Configuración de oolores
+    [SerializeField] private Color _colorBase = Color.gray;   // Color neutro
+    [SerializeField] private Color _visualColorA = new Color(1f, 0.5f, 0.5f); 
+    [SerializeField] private Color _visualColorB = new Color(0.5f, 0.5f, 1f); 
+    [SerializeField] private Color _visualColorC = new Color(0.5f, 1f, 0.5f); 
 
-        private void OnEnable()
+    private void OnEnable()
+    {
+        // Verificar nulos para evitar errores en consola
+        if (_colorChannel != null)
         {
-            if (colorChannel)
-            {
-                colorChannel.OnColorChanged += UpdateBackgroundColor;
-            }
+            _colorChannel.OnColorChanged += UpdateBackgroundColor;
         }
+    }
 
-        private void OnDisable()
+    private void OnDisable()
+    {
+        if (_colorChannel != null)
         {
-            if (colorChannel)
-            {
-                colorChannel.OnColorChanged -= UpdateBackgroundColor;
-            }
+            _colorChannel.OnColorChanged -= UpdateBackgroundColor;
         }
+    }
 
-        private void UpdateBackgroundColor(GameColor newColor)
+    private void UpdateBackgroundColor(GameColor newColor)
+    {
+        // Asignación directa usando Switch Expression (C# 8.0+)
+        // Esto traduce el "Concepto" (ColorA) a la "Realidad" (RGBA)
+        Color targetColor = newColor switch
         {
-            Color targetColor = newColor switch
-            {
-                GameColor.ColorA => visualColorA,
-                GameColor.ColorB => visualColorB,
-                GameColor.ColorC => visualColorC,
-                _ => colorBase
-            };
+            GameColor.ColorA => _visualColorA,
+            GameColor.ColorB => _visualColorB,
+            GameColor.ColorC => _visualColorC,
+            _ => _colorBase // GameColor.None
+        };
 
-            if (backgroundSprite)
-            {
-                backgroundSprite.color = targetColor;
-            }
+        if (_backgroundSprite != null)
+        {
+            _backgroundSprite.color = targetColor;
         }
     }
 }
