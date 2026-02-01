@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: 6f82b78b37341f945a67f6ce3072a8d3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1407921739519630733
+    second: idle (20260131040752)_0
+  - first:
+      213: -3094389513596224261
+    second: idle (20260131040752)_1
+  - first:
+      213: 977715326609508984
+    second: idle (20260131040752)_2
+  - first:
+      213: 7003270599311646611
+    second: idle (20260131040752)_3
+  - first:
+      213: 8841631433739605192
+    second: idle (20260131040752)_4
+  - first:
+      213: -2481299875552322242
+    second: idle (20260131040752)_5
+  - first:
+      213: 6560348827349538242
+    second: idle (20260131040752)_6
+  - first:
+      213: -8188174268614350661
+    second: idle (20260131040752)_7
+  - first:
+      213: 6213540321010657252
+    second: idle (20260131040752)_8
+  - first:
+      213: -477200751644807516
+    second: idle (20260131040752)_9
+  - first:
+      213: 4247519442002783746
+    second: idle (20260131040752)_10
+  - first:
+      213: -7459645887546041542
+    second: idle (20260131040752)_11
+  - first:
+      213: 6082260399678162211
+    second: idle (20260131040752)_12
+  - first:
+      213: -5886569775497052650
+    second: idle (20260131040752)_13
+  - first:
+      213: -5475965614037666839
+    second: idle (20260131040752)_14
+  - first:
+      213: 3697747113859124115
+    second: idle (20260131040752)_15
+  - first:
+      213: -6053494039641944435
+    second: idle (20260131040752)_16
+  - first:
+      213: -4701074027554394045
+    second: idle (20260131040752)_17
+  - first:
+      213: 5703154535168010685
+    second: idle (20260131040752)_18
+  - first:
+      213: 327974861654164723
+    second: idle (20260131040752)_19
+  - first:
+      213: 2614284882380339228
+    second: idle (20260131040752)_20
+  - first:
+      213: -8341548961288331021
+    second: idle (20260131040752)_21
+  - first:
+      213: 443514853033093880
+    second: idle (20260131040752)_22
+  - first:
+      213: 1329656439530823203
+    second: idle (20260131040752)_23
+  - first:
+      213: 36767941153802242
+    second: idle (20260131040752)_24
+  - first:
+      213: -6577726731417567945
+    second: idle (20260131040752)_25
+  - first:
+      213: 5736258248529109701
+    second: idle (20260131040752)_26
+  - first:
+      213: 7033919771323706990
+    second: idle (20260131040752)_27
+  - first:
+      213: 7258341131778976715
+    second: idle (20260131040752)_28
+  - first:
+      213: -6072222112702495118
+    second: idle (20260131040752)_29
+  - first:
+      213: 287483899585598903
+    second: idle (20260131040752)_30
+  - first:
+      213: -1660214715405158603
+    second: idle (20260131040752)_31
+  - first:
+      213: 7141311118746116178
+    second: idle (20260131040752)_32
+  - first:
+      213: 9181191907677550075
+    second: idle (20260131040752)_33
+  - first:
+      213: 9043015331716891392
+    second: idle (20260131040752)_34
+  - first:
+      213: -8169670135912760579
+    second: idle (20260131040752)_35
+  - first:
+      213: 2802936678366639885
+    second: idle (20260131040752)_36
+  - first:
+      213: 7485904084647743697
+    second: idle (20260131040752)_37
+  - first:
+      213: 8930661240714101037
+    second: idle (20260131040752)_38
+  - first:
+      213: -2779974565101515458
+    second: idle (20260131040752)_39
+  - first:
+      213: 893825061178290981
+    second: idle (20260131040752)_40
+  - first:
+      213: 3272899761050066420
+    second: idle (20260131040752)_41
+  - first:
+      213: 4795774115380165216
+    second: idle (20260131040752)_42
+  - first:
+      213: 5101586824315206980
+    second: idle (20260131040752)_43
+  - first:
+      213: -1759258234522265721
+    second: idle (20260131040752)_44
+  - first:
+      213: 4297585333108955425
+    second: idle (20260131040752)_45
+  - first:
+      213: -1735229622409762564
+    second: idle (20260131040752)_46
+  - first:
+      213: 3840392615869516319
+    second: idle (20260131040752)_47
+  - first:
+      213: -1896940577483159489
+    second: idle (20260131040752)_48
+  - first:
+      213: 7652038789023895112
+    second: idle (20260131040752)_49
+  - first:
+      213: -7904352319488077742
+    second: idle (20260131040752)_50
+  - first:
+      213: 780911531394791689
+    second: idle (20260131040752)_51
+  - first:
+      213: 8931527395449957235
+    second: idle (20260131040752)_52
+  - first:
+      213: -3567645320068584217
+    second: idle (20260131040752)_53
+  - first:
+      213: 7294331497335402832
+    second: idle (20260131040752)_54
+  - first:
+      213: -5596140801037338273
+    second: idle (20260131040752)_55
+  - first:
+      213: 6801596583971144557
+    second: idle (20260131040752)_56
+  - first:
+      213: -1091414059457870184
+    second: idle (20260131040752)_57
+  - first:
+      213: -3216626724431279409
+    second: idle (20260131040752)_58
+  - first:
+      213: -5120956224969689307
+    second: idle (20260131040752)_59
+  - first:
+      213: 5363460222999996709
+    second: idle (20260131040752)_60
+  - first:
+      213: 4041417627657683088
+    second: idle (20260131040752)_61
+  - first:
+      213: -8325241038849513208
+    second: idle (20260131040752)_62
+  - first:
+      213: -3442162940287088123
+    second: idle (20260131040752)_63
+  - first:
+      213: -1143886355149998980
+    second: idle (20260131040752)_64
+  - first:
+      213: -7896421386227618143
+    second: idle (20260131040752)_65
+  - first:
+      213: -952323921711209781
+    second: idle (20260131040752)_66
+  - first:
+      213: 4215377289390307514
+    second: idle (20260131040752)_67
+  - first:
+      213: 3620657140377138779
+    second: idle (20260131040752)_68
+  - first:
+      213: 6931620418441993793
+    second: idle (20260131040752)_69
+  - first:
+      213: 5170872609530462682
+    second: idle (20260131040752)_70
+  - first:
+      213: 2626633065340247189
+    second: idle (20260131040752)_71
+  - first:
+      213: -3172980197107879556
+    second: idle (20260131040752)_72
+  - first:
+      213: -5172893970907028525
+    second: idle (20260131040752)_73
+  - first:
+      213: -6365355040308350040
+    second: idle (20260131040752)_74
+  - first:
+      213: -4825805216589056401
+    second: idle (20260131040752)_75
+  - first:
+      213: -883440065505943876
+    second: idle (20260131040752)_76
+  - first:
+      213: 1288487277608541587
+    second: idle (20260131040752)_77
+  - first:
+      213: -7073404578915539664
+    second: idle (20260131040752)_78
+  - first:
+      213: -7576104924538344156
+    second: idle (20260131040752)_79
+  - first:
+      213: -984987970465442436
+    second: idle (20260131040752)_80
+  - first:
+      213: -8103175604837107045
+    second: idle (20260131040752)_81
+  - first:
+      213: -5125916918517358726
+    second: idle (20260131040752)_82
+  - first:
+      213: 5642566010218989322
+    second: idle (20260131040752)_83
+  - first:
+      213: 6182853863052679975
+    second: idle (20260131040752)_84
+  - first:
+      213: 6615381145155317538
+    second: idle (20260131040752)_85
+  - first:
+      213: 7811624850339812000
+    second: idle (20260131040752)_86
+  - first:
+      213: -6949333488039013459
+    second: idle (20260131040752)_87
+  - first:
+      213: 1281192026936252650
+    second: idle (20260131040752)_88
+  - first:
+      213: -6655194554760157898
+    second: idle (20260131040752)_89
+  - first:
+      213: 1252744707980476112
+    second: idle (20260131040752)_90
+  - first:
+      213: -2335518128859643605
+    second: idle (20260131040752)_91
+  - first:
+      213: -5998959186613736779
+    second: idle (20260131040752)_92
+  - first:
+      213: 1300241049146063453
+    second: idle (20260131040752)_93
+  - first:
+      213: 4799503817731406197
+    second: idle (20260131040752)_94
+  - first:
+      213: 2073149209680108134
+    second: idle (20260131040752)_95
+  - first:
+      213: 532091757659174931
+    second: idle (20260131040752)_96
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Quieto_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61c9b7b431f39c4ab0ab1a66b80fd95
+      internalID: 1208599511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quieto_1
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba16051846200149aa4374753dc0831
+      internalID: 677951970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quieto_2
+      rect:
+        serializedVersion: 2
+        x: 2666
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84fad9f30f369b542a9f176b1cff5ea9
+      internalID: 1309729235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quieto_3
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769f9b7b34480134ebbc337fee55022a
+      internalID: -2112021504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quieto_4
+      rect:
+        serializedVersion: 2
+        x: 5332
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95380ffe5f4a53947b7e19930389251b
+      internalID: -1442393237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Quieto_5
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 0
+        width: 1333
+        height: 2000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644d9633c6c1f8e4b9ec58293dcd735f
+      internalID: -1236698050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f37aad3039ad2d1498ea27e4d0fb7800
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":1333.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Quieto_0: 1208599511
+      Quieto_1: 677951970
+      Quieto_2: 1309729235
+      Quieto_3: -2112021504
+      Quieto_4: -1442393237
+      Quieto_5: -1236698050
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
