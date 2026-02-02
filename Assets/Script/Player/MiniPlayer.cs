@@ -16,7 +16,7 @@ namespace Script.Player
         [SerializeField] private ColorEventChannel _colorEventChannel;
         [SerializeField] private GameCapabilityState _gameCapabilityState;
         [SerializeField] private GameColor revealColor = GameColor.ColorC;
-        private bool _initialized;
+        private bool _initialized = false;
 
 
         bool _isMiniPress = false;
@@ -37,25 +37,23 @@ namespace Script.Player
         private void OnStateChanged(GameColor color) => CheckVisibility();
         private void OnSecretUnlocked() => CheckVisibility();
 
-        private void CheckVisibility()
-        {
-            bool canShow = _gameCapabilityState.HasSecretKey &&
-                          (_colorEventChannel.CurrentColor == revealColor);
-            if (!_initialized)
-            {
-                _isMiniPress = canShow;
-                LittlePlayer(canShow);
-                _initialized = true;
-                return;
-            }
-        }
-
         private void Awake()
         {
             _controls = new PlayerControls();
             _player = GetComponent<SpriteRenderer>();
             _playerCol = GetComponent<Collider2D>();
         }
+        private void CheckVisibility()
+        {
+            bool canShow = _gameCapabilityState.HasSecretKey &&
+                          (_colorEventChannel.CurrentColor == revealColor);
+           
+            LittlePlayer(canShow);
+            return;
+            
+            
+        }
+   
 
         private void LittlePlayer(bool isPress)
         {
