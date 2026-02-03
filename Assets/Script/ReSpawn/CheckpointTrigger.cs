@@ -20,12 +20,10 @@ namespace Script.ReSpawn
                 {
                     // Activamos el nuevo punto de respawn
                     targetSpawnPoint.ActivateSpawnPoint();
-
-                    // Feedback opcional (solo si es un checkpoint nuevo)
+                    
                     if (playSound && AudioManager.Instance != null)
                     {
-                        // Podrías agregar un sonido "CheckpointReached" si quieres
-                        // AudioManager.Instance.Play("Checkpoint"); 
+                        
                     }
                     
                     Debug.Log($"Checkpoint activado: {targetSpawnPoint.name}");

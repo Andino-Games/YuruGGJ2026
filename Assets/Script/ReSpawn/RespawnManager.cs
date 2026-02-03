@@ -26,6 +26,11 @@ namespace Script.ReSpawn
         {
             _player = GameObject.FindGameObjectWithTag("Player");
             if (_player) _playerRb = _player.GetComponent<Rigidbody2D>();
+            
+            if (screenFader)
+            {
+                screenFader.gameObject.SetActive(false);
+            }
         }
 
         public void SetSpawnPoint(Transform newSpawnPoint)
@@ -45,31 +50,35 @@ namespace Script.ReSpawn
         {
             _isRespawning = true;
 
-            // 1. Audio de Muerte/Caída (Opcional)
+            // 1. Activar el Fader
+            if (screenFader) screenFader.gameObject.SetActive(true);
+
+            // 2. Audio de Muerte/Caída
             if (AudioManager.Instance != null) AudioManager.Instance.Play("PlayerDeath");
 
-            // 2. Congelar al jugador (Opcional: Desactivar controles aquí si tuvieras referencia)
-            if (_playerRb) _playerRb.linearVelocity = Vector2.zero; // Detener caída
-            // _playerRb.simulated = false; // Opcional: Evitar físicas durante el fade
+            // 3. Congelar al jugador
+            if (_playerRb) _playerRb.linearVelocity = Vector2.zero;
 
-            // 3. Fade Out (Pantalla a Negro)
+            // 4. Fade Out (Pantalla a Negro)
             if (screenFader) yield return screenFader.FadeOut();
-            else yield return new WaitForSeconds(0.5f); // Espera de seguridad si no hay fader
+            else yield return new WaitForSeconds(0.5f);
 
-            // 4. Mover al jugador
+            // 5. Mover al jugador
             _player.transform.position = _currentSpawnPoint.position;
-            if (_playerRb) _playerRb.linearVelocity = Vector2.zero; // Asegurar velocidad cero de nuevo
+            if (_playerRb) _playerRb.linearVelocity = Vector2.zero;
 
-            // 5. Audio de Respawn
+            // 6. Audio de Respawn
             if (AudioManager.Instance != null) AudioManager.Instance.Play("PlayerRespawn");
 
-            // 6. Pequeña pausa en negro
+            // 7. Pequeña pausa en negro
             yield return new WaitForSeconds(0.2f);
 
-            // 7. Fade In (Pantalla visible)
+            // 8. Fade In (Pantalla visible)
             if (screenFader) yield return screenFader.FadeIn();
 
-            // _playerRb.simulated = true;
+            // 9. Desactivar el Fader para limpiar el editor
+            if (screenFader) screenFader.gameObject.SetActive(false);
+
             _isRespawning = false;
         }
     }
