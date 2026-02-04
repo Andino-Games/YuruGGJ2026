@@ -53,15 +53,25 @@ namespace Script.Player
                           (_colorEventChannel.CurrentColor == revealColor);
 
             _isMiniPress = canShow;
-            LittlePlayer(canShow);
-            return;
+            if(canShow)
+            {
+                LittlePlayer(canShow, 300f);
+                return;
+            }
+            else
+            {
+                
+                LittlePlayer(canShow,1600f);
+                
+                
+            }
             
             
         }  
 
-        private void LittlePlayer(bool isPress)
+        private void LittlePlayer(bool isPress, float mass)
         {
-            player.jumpForce = 300f;
+            player.jumpForce = mass;
              _player.enabled = !isPress;
             _playerCol.enabled = !isPress;
             miniplayerSp.enabled = isPress;
