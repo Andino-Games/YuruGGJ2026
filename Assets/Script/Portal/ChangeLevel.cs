@@ -1,5 +1,6 @@
 using Script.UI;
 using System.Collections;
+using Script.Player;
 using UnityEngine;
 
 public class ChangeLevel : MonoBehaviour
@@ -8,12 +9,12 @@ public class ChangeLevel : MonoBehaviour
     [SerializeField] private ScreenFader screenFader;
     [SerializeField] private GameObject finalImage;
     public bool final;
-    private GameObject player;
+    private PlayerMovement player;
     
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = FindFirstObjectByType<PlayerMovement>();
         if (screenFader)
         {
             screenFader.gameObject.SetActive(false);
@@ -51,7 +52,7 @@ public class ChangeLevel : MonoBehaviour
         // 6. Audio de Respawn
         //if (AudioManager.Instance != null) AudioManager.Instance.Play("PlayerRespawn");
 
-        // 7. Pequeña pausa en negro
+        // 7. Pequeï¿½a pausa en negro
         yield return new WaitForSeconds(0.2f);
 
         // 8. Fade In (Pantalla visible)

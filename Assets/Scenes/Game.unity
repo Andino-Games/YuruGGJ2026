@@ -3608,6 +3608,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillZones
       objectReference: {fileID: 0}
+    - target: {fileID: 3764751451036909964, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 78.77479
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764751451036909964, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.165948
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764751451036909964, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.7691
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764751451036909964, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.9454
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464445247195409445, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 91.22879
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464445247195409445, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 120.1752
+      objectReference: {fileID: 0}
     - target: {fileID: 7522804135331925699, guid: 75d229d27d1dedd44858c319a635369f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 97.17
@@ -7686,7 +7710,7 @@ GameObject:
   - component: {fileID: 1577987028}
   m_Layer: 0
   m_Name: MiniPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
