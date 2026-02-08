@@ -1,4 +1,4 @@
-﻿%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &8841294388404167764
 GameObject:
@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 942740955954056102}
   - component: {fileID: 8986148229295240050}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Troncos_Fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
