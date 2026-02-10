@@ -14,13 +14,27 @@ namespace Script.Player
         [SerializeField] public float jumpForce;
         [SerializeField] private float acceleraton = 10f;
         [SerializeField] private float decelerator = 10f;
-        [SerializeField] private Transform groundCheck; // Un objeto vacío en los pies del jugador
+        [SerializeField] private Transform groundCheck; // Un objeto vacï¿½o en los pies del jugador
         [SerializeField] private float groundCheckRadius = 0.2f;
         [SerializeField] private LayerMask groundLayer;
         private PlayerPush _pushScript;
         SpriteRenderer sp;
         Animator anim;
         private bool _isGrounded;
+        
+        private float _coyoteTimeCounter;
+        [SerializeField] private float coyoteTime = 0.2f;
+        private void OnEnable()
+        {
+            _controls.Player.Enable();
+            // Suscribimos el salto al evento 'performed' (se dispara una vez al presionar)
+            _controls.Player.Jump.performed += ctx => Jump(); 
+        }
+        private void OnDisable()
+        {
+            _controls.Player.Jump.performed -= ctx => Jump();
+            _controls.Player.Disable();
+        }
 
         private void Awake()
         {
@@ -35,10 +49,16 @@ namespace Script.Player
         private void FixedUpdate()
         {
             _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
-             anim.SetBool("Jump", !_isGrounded);
+            if (_isGrounded) {
+                _coyoteTimeCounter = coyoteTime;
+            } else {
+                _coyoteTimeCounter -= Time.fixedDeltaTime;
+            }
+            anim.SetBool("Jump", !_isGrounded);
             if (_miniPlayer.miniplayerAnim != null)
                 _miniPlayer.miniplayerAnim.SetBool("Jump", !_isGrounded);
+
+            _moveInput = _controls.Player.Move.ReadValue<Vector2>();
 
             _moveInput = _controls.Player.Move.ReadValue<Vector2>();
             float targetSpeed = _moveInput.x * speed;
@@ -49,7 +69,7 @@ namespace Script.Player
             float newVelocity = Mathf.Lerp(_rb.linearVelocity.x, targetSpeed, learp * Time.fixedDeltaTime);
             _rb.linearVelocity = new Vector2(newVelocity, _rb.linearVelocity.y);
 
-            if (_moveInput.y > 0.5f) Jump();
+            
         }
 
         private void HandleVisuals()
@@ -72,22 +92,21 @@ namespace Script.Player
                     if (_miniPlayer.miniplayerSp != null)
                         _miniPlayer.miniplayerSp.flipX = lookLeft;
                 }
-                // Si IsCurrentlyPushing es true, el código del flip se ignora 
-                // y el personaje mantiene la dirección que tenía al empezar el agarre.
+                // Si IsCurrentlyPushing es true, el cï¿½digo del flip se ignora 
+                // y el personaje mantiene la direcciï¿½n que tenï¿½a al empezar el agarre.
             }
         }
 
         private void Jump()
         {
-            if (_isGrounded)
+            if (_coyoteTimeCounter > 0f)
             {
                 _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
+                _coyoteTimeCounter = 0f; // Evita saltar en el aire tras el primer salto
             }
         }
 
         
-        private void OnEnable() => _controls.Player.Enable();
-        private void OnDisable() => _controls.Player.Disable();
+        
     }
 }
